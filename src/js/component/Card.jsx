@@ -1,16 +1,18 @@
-import React from "react" ;
-export const Card = () => {
+import React from "react";
+export const Card = (props) => {
     return (
-        <>
-        <div className="card" style={"width: 18rem;"}>
-            <img src="https://www.ciclo21.com/wp-content/uploads/2023/12/vuelta-espana-logo-2024-unipublic-press.jpg" className="card-img-top" alt="..."/>
-            <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+
+        <div className="col-3">
+            <div className="card" >
+                <img className="card-img-top" style={{ height: "200px" }} src={props.img} />
+                <div className="card-body" style={{ height: "300px" }}>
+                    <h5 className="card-title">{props.title}</h5>
+                    <p className="card-text" style={{ height: "160px" }}>{props.text}</p>
+                    <a href="#" className="btn btn-primary" >Más información</a>
+                </div>
             </div>
         </div>
-        </>
+
     );
-} 
+}
 export default Card;
